@@ -1,0 +1,13 @@
+def find_largest_sum(arr):
+    largest_sum = 0 #variable to store the largest sum of digits
+    for string in arr: #iterate through each string in the array
+        current_sum = 0 #variable to store the sum of digits in the current string
+        for char in string: # iterate through each character in the string
+            if char.isdigit(): #check if the character is a digit
+                current_sum += int(char) # add the digit to the current sum
+        if current_sum > largest_sum: # check if the current sum is larger than the largest sum seen so far
+            largest_sum = current_sum # update the largest sum
+    return largest_sum # return the largest sum of digits
+
+Input = [ "dh7js4jf", "or2rjvn2w", "h1n36mfl", "a7e6fw" ] #input array
+print(find_largest_sum(Input)) #output is 13
